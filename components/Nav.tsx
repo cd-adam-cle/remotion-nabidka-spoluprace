@@ -54,12 +54,6 @@ export function Nav() {
               </a>
             ))}
           </nav>
-          <a
-            href="#kontakt"
-            className="hidden sm:inline-flex items-center gap-2 text-[13px] font-medium bg-white text-[#0a0a0f] px-4 py-2 rounded-xl hover:bg-[#81d2c7] transition-colors"
-          >
-            Ozvat se
-          </a>
         </div>
       </div>
     </motion.header>

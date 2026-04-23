@@ -26,14 +26,22 @@ export function CTA() {
               Pro jakékoli dotazy <span className="gradient-text">nebo kontakt</span>.
             </h2>
 
-            <a
-              href="mailto:zikmundi@pm.me?subject=Remotion%20workflow"
-              className="inline-flex items-center gap-2 bg-white text-[#0a0a0f] px-6 py-3.5 rounded-2xl font-semibold hover:bg-[#81d2c7] transition-all hover:scale-[1.02]"
-            >
-              <Mail className="w-4 h-4" />
-              zikmundi@pm.me
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href="mailto:zikmundi@pm.me?subject=Remotion%20workflow"
+                className="inline-flex items-center gap-2 bg-white text-[#0a0a0f] px-6 py-3.5 rounded-2xl font-semibold hover:bg-[#81d2c7] transition-all hover:scale-[1.02]"
+              >
+                Ozvat se
+              </a>
+              <a
+                href="mailto:zikmundi@pm.me?subject=Remotion%20workflow"
+                className="inline-flex items-center gap-2 text-[var(--muted)] hover:text-white transition-colors text-sm"
+              >
+                <Mail className="w-4 h-4" />
+                zikmundi@pm.me
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
