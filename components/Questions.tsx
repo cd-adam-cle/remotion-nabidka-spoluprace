@@ -59,14 +59,12 @@ const questions: Question[] = [
   {
     id: "volume",
     category: "Jen pro variantu B",
-    question: "Kolik postů / jaký rytmus",
-    helper:
-      "Jen v případě, že byste chtěli i naši správu a generaci. Týdenní rytmus je možný místo měsíčního.",
+    question: "Kolik postů týdně",
     options: [
-      { value: "4m", label: "4 měsíčně", sub: "~1× týdně" },
-      { value: "9m", label: "9 měsíčně", sub: "~2× týdně" },
-      { value: "13m", label: "13 měsíčně", sub: "~3× týdně" },
-      { value: "weekly", label: "Raději týdenní rytmus", sub: "Domluvíme kolik postů týdně" },
+      { value: "1", label: "1 týdně" },
+      { value: "2", label: "2 týdně" },
+      { value: "3", label: "3 týdně" },
+      { value: "custom", label: "Jiný rytmus — domluvíme" },
     ],
   },
 ];
@@ -75,28 +73,21 @@ export function Questions() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
 
   return (
-    <section id="otazky" className="scroll-reveal py-24 px-5">
+    <section id="otazky" className="scroll-reveal py-12 px-5">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-14 max-w-3xl"
+          className="mb-10 max-w-3xl"
         >
-          <div className="text-[11px] uppercase tracking-widest text-[var(--muted)] mb-4">
-            K rozmyšlení
-          </div>
           <h2
             style={{ fontFamily: "var(--font-display)" }}
             className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.05]"
           >
-            Pár věcí, na které se <span className="gradient-text">zeptám</span>.
+            Co si <span className="gradient-text">promyslet</span>.
           </h2>
-          <p className="text-[var(--muted)] mt-5 leading-relaxed">
-            Klidně si na nich klikejte jako na orientaci — neodesílá se to nikam.
-            Je to jen proto, abyste věděli, co si rozmyslet před hovorem.
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-4">

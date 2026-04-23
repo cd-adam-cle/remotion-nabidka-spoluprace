@@ -38,7 +38,7 @@ export function Nav() {
         >
           <a href="#top" className="flex items-center gap-2 group">
             <span className="font-semibold text-sm tracking-tight">
-              Adam Zikmund
+              Adam Zikmund <span className="text-[var(--muted)] font-normal">— Carousel Workflow</span>
             </span>
           </a>
           <nav className="hidden md:flex items-center gap-1">

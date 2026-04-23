@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Iteration() {
   return (
-    <section id="uprav" className="scroll-reveal py-24 px-5">
+    <section id="uprav" className="scroll-reveal py-12 px-5">
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -17,22 +17,12 @@ export function Iteration() {
           <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-[#6366f1]/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative max-w-2xl">
-            <div className="text-[11px] uppercase tracking-widest text-[var(--muted)] mb-4">
-              Systém není fixní
-            </div>
             <h2
               style={{ fontFamily: "var(--font-display)" }}
-              className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.1] mb-5"
+              className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.1]"
             >
-              Průběžně <span className="gradient-text">ladíme</span>,<br />
-              ať vám to sedí.
+              Průběžně budeme <span className="gradient-text">ladit</span>, aby bylo vše přesně podle vašich představ.
             </h2>
-            <p className="text-[var(--muted)] leading-relaxed">
-              Ať si vyberete variantu A nebo B — šablony, workflow i rytmus
-              se dají upravovat i po spuštění. Když něco nefunguje nebo vznikne
-              nová potřeba, domluvíme se a doladíme to. Nic není vytesané do
-              kamene.
-            </p>
           </div>
         </motion.div>
       </div>

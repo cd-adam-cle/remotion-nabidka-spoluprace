@@ -5,18 +5,13 @@ import { motion } from "framer-motion";
 const steps = [
   {
     tag: "01",
-    title: "Projdu značku",
-    desc: "Barvy, typografie, tón. Z toho postavím pár šablon, které budou dávat carouselům konzistentní rukopis.",
+    title: "Projdu PDF a značku",
+    desc: "Barvy, typografie, tón. Z toho se odvíjí celý vizuální systém workflow.",
   },
   {
     tag: "02",
     title: "Postavím workflow",
-    desc: "Šablony jako kód, ne ručně v Canvě. Změním jednu barvu a přerendrují se všechny posty najednou.",
-  },
-  {
-    tag: "03",
-    title: "Vyrobíme posty",
-    desc: "Buď vám to předám a řídíte si to sami, nebo generuju za vás a vy schvalujete. Obě varianty níže.",
+    desc: "Pro obecnou generaci carouselů a pár design šablon.",
   },
 ];
 
@@ -24,14 +19,14 @@ export function Process() {
   return (
     <section
       id="kroky"
-      className="scroll-reveal pt-32 md:pt-40 pb-20 px-5"
+      className="scroll-reveal pt-28 md:pt-32 pb-10 px-5"
     >
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-14 max-w-3xl"
+          className="mb-10 max-w-3xl"
         >
           <div className="text-[11px] uppercase tracking-widest text-[var(--muted)] mb-4">
             Jak to bude probíhat
@@ -40,13 +35,11 @@ export function Process() {
             style={{ fontFamily: "var(--font-display)" }}
             className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.05]"
           >
-            Tři kroky — od vaší značky
-            <br />
-            ke <span className="gradient-text">carouselu v kódu</span>.
+            Dva kroky k <span className="gradient-text">AI carousel workflow</span>.
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           {steps.map((step, i) => (
             <motion.div
               key={step.tag}

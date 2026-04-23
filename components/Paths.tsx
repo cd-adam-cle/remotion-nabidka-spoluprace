@@ -17,10 +17,6 @@ const paths = [
       "Úvodní školení — jak carousely generovat, měnit texty, exportovat",
       "Postupné úpravy systému, pokud později vyplyne potřeba",
     ],
-    perfectFor: [
-      "Máte v týmu někoho, kdo to převezme",
-      "Chcete content držet interně",
-    ],
   },
   {
     id: "B",
@@ -34,10 +30,6 @@ const paths = [
       "Komunikace přes Slack / mail podle vašich zvyklostí",
       "Systém ladíme průběžně podle toho, co funguje",
     ],
-    perfectFor: [
-      "Nechcete řešit produkci",
-      "Chcete partnera, ne jednorázového dodavatele",
-    ],
   },
 ];
 
@@ -45,25 +37,20 @@ export function Paths() {
   const [active, setActive] = useState<"A" | "B">("B");
 
   return (
-    <section id="varianty" className="scroll-reveal py-24 px-5">
+    <section id="varianty" className="scroll-reveal py-12 px-5">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-12 max-w-3xl"
+          className="mb-8 max-w-3xl"
         >
-          <div className="text-[11px] uppercase tracking-widest text-[var(--muted)] mb-4">
-            Dvě varianty spolupráce
-          </div>
           <h2
             style={{ fontFamily: "var(--font-display)" }}
             className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.05]"
           >
-            Vyberete si, <span className="gradient-text">jak hluboko</span>
-            <br />
-            chcete jít.
+            <span className="gradient-text">Varianty</span> spolupráce.
           </h2>
         </motion.div>
 
@@ -127,7 +114,7 @@ export function Paths() {
                     {path.subtitle}
                   </p>
 
-                  <div className="space-y-3 mb-7">
+                  <div className="space-y-3">
                     {path.bullets.map((b) => (
                       <div key={b} className="flex items-start gap-3">
                         <div className="mt-0.5 w-5 h-5 rounded-full bg-[#81d2c7]/15 flex items-center justify-center flex-shrink-0">
@@ -140,31 +127,12 @@ export function Paths() {
                     ))}
                   </div>
 
-                  <div className="border-t border-white/5 pt-5">
-                    <div className="text-[11px] uppercase tracking-widest text-[var(--muted)] mb-3">
-                      Hodí se, když…
-                    </div>
-                    <ul className="space-y-1.5">
-                      {path.perfectFor.map((p) => (
-                        <li
-                          key={p}
-                          className="text-[13px] text-[var(--muted)] flex items-start gap-2"
-                        >
-                          <span className="text-[#81d2c7] mt-0.5">·</span>
-                          {p}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               </motion.div>
             );
           })}
         </div>
 
-        <p className="text-center text-xs text-[var(--muted)] mt-8 max-w-xl mx-auto leading-relaxed">
-          Cenu probereme vokálně — záleží na rozsahu a pár detailech z otázek níže.
-        </p>
       </div>
     </section>
   );
