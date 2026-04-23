@@ -19,10 +19,13 @@ export function Iteration() {
           <div className="relative max-w-2xl">
             <h2
               style={{ fontFamily: "var(--font-display)" }}
-              className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.1]"
+              className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.1] mb-4"
             >
-              Průběžně budeme <span className="gradient-text">ladit</span>, aby bylo vše přesně podle vašich představ.
+              Dolaďujeme průběžně — dokud to není <span className="gradient-text">přesně podle vás</span>.
             </h2>
+            <p className="text-[var(--muted)] leading-relaxed">
+              Reagujeme na vaši zpětnou vazbu a upravujeme tak dlouho, dokud výsledek přesně nesedí.
+            </p>
           </div>
         </motion.div>
       </div>
