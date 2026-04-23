@@ -32,8 +32,10 @@ export function Nav() {
     >
       <div className="mx-auto max-w-6xl px-5">
         <div
-          className={`glass rounded-2xl flex items-center justify-between px-5 py-3 transition-all ${
-            scrolled ? "shadow-[0_20px_60px_-30px_rgba(129,210,199,0.25)]" : ""
+          className={`rounded-2xl flex items-center justify-between px-5 py-3 transition-all duration-300 border ${
+            scrolled
+              ? "bg-[#0a0a0f]/85 backdrop-blur-xl border-white/10 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)]"
+              : "bg-white/[0.03] backdrop-blur-md border-white/[0.06]"
           }`}
         >
           <a href="#top" className="flex items-center gap-2 group">
