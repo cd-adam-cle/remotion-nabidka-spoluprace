@@ -1,0 +1,65 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const links = [
+  { href: "#kroky", label: "Kroky" },
+  { href: "#varianty", label: "Varianty" },
+  { href: "#otazky", label: "Otázky" },
+  { href: "#uprav", label: "Úpravy" },
+  { href: "#kontakt", label: "Kontakt" },
+];
+
+export function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <motion.header
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+        scrolled ? "py-3" : "py-5"
+      }`}
+    >
+      <div className="mx-auto max-w-6xl px-5">
+        <div
+          className={`glass rounded-2xl flex items-center justify-between px-5 py-3 transition-all ${
+            scrolled ? "shadow-[0_20px_60px_-30px_rgba(129,210,199,0.25)]" : ""
+          }`}
+        >
+          <a href="#top" className="flex items-center gap-2 group">
+            <span className="font-semibold text-sm tracking-tight">
+              Adam Zikmund
+            </span>
+          </a>
+          <nav className="hidden md:flex items-center gap-1">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="px-3 py-1.5 text-[13px] text-[var(--muted)] hover:text-white transition-colors rounded-lg hover:bg-white/5"
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+          <a
+            href="#kontakt"
+            className="hidden sm:inline-flex items-center gap-2 text-[13px] font-medium bg-white text-[#0a0a0f] px-4 py-2 rounded-xl hover:bg-[#81d2c7] transition-colors"
+          >
+            Ozvat se
+          </a>
+        </div>
+      </div>
+    </motion.header>
+  );
+}
