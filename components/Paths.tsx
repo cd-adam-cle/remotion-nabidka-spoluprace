@@ -85,8 +85,9 @@ export function Paths() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className={cn(
                   "relative rounded-3xl p-7 md:p-9 transition-all duration-500 overflow-hidden",
+                  !isActive && "hidden md:block",
                   isActive
-                    ? "glass-strong ring-accent scale-[1.015]"
+                    ? "glass-strong ring-accent md:scale-[1.015]"
                     : "glass opacity-70 hover:opacity-100"
                 )}
               >
