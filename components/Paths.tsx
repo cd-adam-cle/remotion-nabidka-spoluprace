@@ -37,13 +37,13 @@ export function Paths() {
   const [active, setActive] = useState<"A" | "B">("B");
 
   return (
-    <section id="varianty" className="scroll-reveal py-12 px-5">
+    <section id="varianty" className="scroll-reveal py-8 px-5">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="mb-8 max-w-3xl"
         >
           <h2
@@ -82,7 +82,7 @@ export function Paths() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
                 className={cn(
                   "relative rounded-3xl p-7 md:p-9 transition-all duration-500 overflow-hidden",
                   !isActive && "hidden md:block",

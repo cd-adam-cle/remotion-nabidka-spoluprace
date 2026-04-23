@@ -73,13 +73,13 @@ export function Questions() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
 
   return (
-    <section id="otazky" className="scroll-reveal py-12 px-5">
+    <section id="otazky" className="scroll-reveal py-8 px-5">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="mb-10 max-w-3xl"
         >
           <h2
@@ -99,7 +99,7 @@ export function Questions() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: 0.45, delay: i * 0.07, ease: [0.25, 0.46, 0.45, 0.94] }}
                 className="glass hover-lift rounded-3xl p-6 md:p-7 flex flex-col"
               >
                 <div className="text-[10px] uppercase tracking-widest text-[var(--muted)] mb-2">

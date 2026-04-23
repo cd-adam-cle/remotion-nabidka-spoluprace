@@ -19,13 +19,13 @@ export function Process() {
   return (
     <section
       id="kroky"
-      className="scroll-reveal pt-28 md:pt-32 pb-10 px-5"
+      className="scroll-reveal pt-20 md:pt-24 pb-6 px-5"
     >
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="mb-10 max-w-3xl"
         >
           <div className="text-[11px] uppercase tracking-widest text-[var(--muted)] mb-4">
@@ -46,7 +46,7 @@ export function Process() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="glass hover-lift rounded-3xl p-7 relative overflow-hidden"
             >
               <div className="absolute -top-8 -right-8 w-32 h-32 bg-[#81d2c7]/8 rounded-full blur-2xl" />

@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 export function Iteration() {
   return (
-    <section id="uprav" className="scroll-reveal py-12 px-5">
+    <section id="uprav" className="scroll-reveal py-8 px-5">
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="glass-strong rounded-3xl p-8 md:p-12 relative overflow-hidden"
         >
           <div className="absolute -top-32 -right-32 w-80 h-80 bg-[#81d2c7]/20 rounded-full blur-3xl pointer-events-none" />

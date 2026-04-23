@@ -5,13 +5,13 @@ import { Mail, ArrowUpRight } from "lucide-react";
 
 export function CTA() {
   return (
-    <section id="kontakt" className="scroll-reveal py-12 pb-24 px-5">
+    <section id="kontakt" className="scroll-reveal py-8 pb-16 px-5">
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="glass-strong rounded-[32px] p-8 md:p-14 relative overflow-hidden text-center"
         >
           <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#81d2c7]/25 rounded-full blur-3xl pointer-events-none" />
